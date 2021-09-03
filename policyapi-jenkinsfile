@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage('Stage') {
             steps {
+                withCredentials([usernamePassword(credentialsId: 'nsxcreds', passwordVariable: 'pass', usernameVariable: 'user')]) {
                 sh '''
                 rm -f policy_api_with_jenkins.json
-                wget -q https://raw.githubusercontent.com/lcamarda/blog/master/policy_api_with_jenkins.json
+                wget -q https://raw.githubusercontent.com/bloomjn/VMworld-2021-IaC/master/policy_api_with_jenkins.json
                 '''
                 }
             }
