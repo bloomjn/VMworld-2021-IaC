@@ -1,6 +1,3 @@
-#Simple Jenkins Pipeline that Passes username and password
-#Production deployments are recommended to have a principal identity configured within NSX-T to restrict access to resources made by Jenkins
-
 pipeline {
     agent any
     stages {
