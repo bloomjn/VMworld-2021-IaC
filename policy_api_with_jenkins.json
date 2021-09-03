@@ -1,1 +1,74 @@
-{"resource_type":"Infra","children":[{"resource_type":"ChildTier1","marked_for_delete":false,"Tier1":{"resource_type":"Tier1","id":"Jenkins-T1","description":"Jenkins-T1","display_name":"Jenkins-T1","failover_mode":"NON_PREEMPTIVE","tier0_path":"/infra/tier-0s/t0","children":[{"resource_type":"ChildLocaleServices","LocaleServices":{"resource_type":"LocaleServices","id":"default","edge_cluster_path":"/infra/sites/default/enforcement-points/default/edge-clusters/ff829166-fc3a-4b6c-a5d6-3d8d9ecd2dd7"}},{"resource_type":"ChildSegment","Segment":{"resource_type":"Segment","id":"jenkins-web","description":"overlay web logical switch","display_name":"JENKINS-WEB","transport_zone_path":"/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e","subnets":[{"gateway_address":"172.16.211.1/24"}]}},{"resource_type":"ChildSegment","Segment":{"resource_type":"Segment","id":"jenkins-app","description":"overlay app logical switch","display_name":"JENKINS-APP","transport_zone_path":"/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e","subnets":[{"gateway_address":"172.16.212.1/24"}]}},{"resource_type":"ChildSegment","Segment":{"resource_type":"Segment","id":"jenkins-db","description":"overlay db logical switch","display_name":"JENKINS-DB","transport_zone_path":"/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e","subnets":[{"gateway_address":"172.16.213.1/24"}]}}]}},null,null]}
+{
+    "resource_type": "Infra",
+    "children": [
+        {
+            "resource_type": "ChildTier1",
+            "marked_for_delete": false,
+            "Tier1": {
+                "resource_type": "Tier1",
+                "id": "Jenkins-T1",
+                "description": "Jenkins-T1",
+                "display_name": "Jenkins-T1",
+                "failover_mode": "NON_PREEMPTIVE",
+                "tier0_path": "/infra/tier-0s/t0",
+                "children": [
+                    {
+                        "resource_type": "ChildLocaleServices",
+                        "LocaleServices": {
+                            "resource_type": "LocaleServices",
+                            "id": "default",
+                            "edge_cluster_path": "/infra/sites/default/enforcement-points/default/edge-clusters/ff829166-fc3a-4b6c-a5d6-3d8d9ecd2dd7"
+                        }
+                    },
+                    {
+                        "resource_type": "ChildSegment",
+                        "Segment": {
+                            "resource_type": "Segment",
+                            "id": "jenkins-web",
+                            "description": "overlay web logical switch",
+                            "display_name": "JENKINS-WEB",
+                            "transport_zone_path": "/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e",
+                            "subnets": [
+                                {
+                                    "gateway_address": "172.16.211.1/24"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "resource_type": "ChildSegment",
+                        "Segment": {
+                            "resource_type": "Segment",
+                            "id": "jenkins-app",
+                            "description": "overlay app logical switch",
+                            "display_name": "JENKINS-APP",
+                            "transport_zone_path": "/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e",
+                            "subnets": [
+                                {
+                                    "gateway_address": "172.16.212.1/24"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "resource_type": "ChildSegment",
+                        "Segment": {
+                            "resource_type": "Segment",
+                            "id": "jenkins-db",
+                            "description": "overlay db logical switch",
+                            "display_name": "JENKINS-DB",
+                            "transport_zone_path": "/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e",
+                            "subnets": [
+                                {
+                                    "gateway_address": "172.16.213.1/24"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        null,
+        null
+    ]
+}
