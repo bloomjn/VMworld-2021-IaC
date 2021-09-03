@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Stage') {
             steps {
-                withCredentials([certificate( credentialsId: 'tenant2-cert', keystoreVariable: 'CERT')]) {
+                withCredentials([certificate( credentialsId: 'NSX-T Creds', keystoreVariable: 'CERT')]) {
                 sh '''
                 rm -f policy_api_with_jenkins.json
                 rm -f file.key.pem
