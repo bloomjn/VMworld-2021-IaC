@@ -11,8 +11,7 @@
             "display_name":"Jenkins-AutoTier1",
             "failover_mode":"NON_PREEMPTIVE",
             "tier0_path":"/infra/tier-0s/t0",
-               ],
-               { 
+               ], 
                   "resource_type":"ChildSegment",
                   "Segment":{ 
                      "resource_type":"Segment",
