@@ -4,7 +4,18 @@ pipeline {
         stage('Stage') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'nsxcreds', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                sh '''
+                rm -f policy_api_with_jenkins.json
+                wget -q https://raw.githubusercontent.com/lcamarda/blog/master/policy_api_with_jenkins.json
+                '''
                 }
+            }
+        }
+        stage('Apply') {
+            steps {
+                sh '''
+                curl -k --user admin:'Admin!23Admin' -H 'Content-Type: application/json' --request PATCH -d "@policy_api_with_jenkins.json" https://10.182.3.46/policy/api/v1/infra
+                '''
             }
         }
     }
