@@ -9,8 +9,8 @@ pipeline {
                 rm -f file.key.pem
                 rm -f file.crt.pem
                 wget -q https://raw.githubusercontent.com/lcamarda/blog/master/policy_api_with_jenkins.json
-                openssl pkcs12 -in $CERT -out file.key.pem -nocerts -nodes -passin pass:VMware1!
-                openssl pkcs12 -in $CERT -out file.crt.pem -clcerts -nokeys -passin pass:VMware1!
+                openssl pkcs12 -in $CERT -out file.key.pem -nocerts -nodes -passin pass:Admin!23Admin
+                openssl pkcs12 -in $CERT -out file.crt.pem -clcerts -nokeys -passin pass:Admin!23Admin
                 '''
                 }
             }
