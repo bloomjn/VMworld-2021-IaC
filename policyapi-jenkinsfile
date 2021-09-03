@@ -1,25 +1,13 @@
+#Simple Jenkins Pipeline that Passes username and password
+#Production deployments are recommended to have a principal identity configured within NSX-T to restrict access to resources made by Jenkins
+
 pipeline {
     agent any
     stages {
         stage('Stage') {
             steps {
-                withCredentials([certificate( credentialsId: 'NSX-T Creds', keystoreVariable: 'CERT')]) {
-                sh '''
-                rm -f policy_api_with_jenkins.json
-                rm -f file.key.pem
-                rm -f file.crt.pem
-                wget -q https://github.com/bloomjn/blog/blob/master/policy_api_with_jenkins.json
-                openssl pkcs12 -in $CERT -out file.key.pem -nocerts -nodes -passin pass:Admin!23Admin
-                openssl pkcs12 -in $CERT -out file.crt.pem -clcerts -nokeys -passin pass:Admin!23Admin
-                '''
+                withCredentials([usernamePassword(credentialsId: 'nsxcreds', passwordVariable: 'pass', usernameVariable: 'user')]) {
                 }
-            }
-        }
-        stage('Apply') {
-            steps {
-                sh '''
-                curl -E ./file.crt.pem --key ./file.key.pem -k -H 'content-type: application/json' --request PATCH -d "@policy_api_with_jenkins.json" https://10.182.3.46/policy/api/v1/infra
-                '''
             }
         }
     }
