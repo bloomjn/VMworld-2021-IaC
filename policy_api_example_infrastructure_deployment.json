@@ -103,61 +103,16 @@
                   "resource_type":"ChildSecurityPolicy",
                   "marked_for_delete":"false",
                   "SecurityPolicy":{ 
-                     "id":"JenkinsAPP01-webapp",
+                     "id":"JenkinsAPP01",
                      "resource_type":"SecurityPolicy",
-                     "display_name":"JenkinsAPP01-webapp",
+                     "display_name":"JenkinsAPP01",
                      "description":"JenkinsAPP01 webapp Policy",
                      "rules":[ 
+                        { 
                         { 
                            "resource_type":"Rule",
                            "id":"webapp-rule-01",
                            "description":"webapp-rule-01",
-                           "display_name":"Management Outbound",
-                           "sequence_number":50,
-                           "source_groups":[ 
-                              "ANY"
-                           ],
-                           "destination_groups":[ 
-                              "/infra/domains/default/groups/MGMT"
-                           ],
-                           "services":[ 
-                              "ANY"
-                           ],
-                           "profiles":[ 
-                              "ANY"
-                           ],
-                           "action":"ALLOW",
-                           "scope":[ 
-                              "/infra/domains/default/groups/WEBAPP"
-                           ]
-                        },
-                        { 
-                           "resource_type":"Rule",
-                           "id":"webapp-rule-02",
-                           "description":"webapp-rule-02",
-                           "display_name":"Management Inbound",
-                           "sequence_number":60,
-                           "source_groups":[ 
-                              "/infra/domains/default/groups/MGMT"
-                           ],
-                           "destination_groups":[ 
-                              "ANY"
-                           ],
-                           "services":[ 
-                              "ANY"
-                           ],
-                           "profiles":[ 
-                              "ANY"
-                           ],
-                           "action":"ALLOW",
-                           "scope":[ 
-                              "/infra/domains/default/groups/WEBAPP"
-                           ]
-                        },
-                        { 
-                           "resource_type":"Rule",
-                           "id":"webapp-rule-03",
-                           "description":"webapp-rule-03",
                            "display_name":"LB to WEB",
                            "sequence_number":70,
                            "source_groups":[ 
@@ -174,13 +129,13 @@
                            ],
                            "action":"ALLOW",
                            "scope":[ 
-                              "/infra/domains/default/groups/WEBAPP"
+                              "/infra/domains/default/groups/JenkinsAPP01"
                            ]
                         },
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-04",
-                           "description":"webapp-rule-04",
+                           "id":"webapp-rule-02",
+                           "description":"webapp-rule-2",
                            "display_name":"WEB to APP",
                            "sequence_number":80,
                            "source_groups":[ 
@@ -197,13 +152,13 @@
                            ],
                            "action":"ALLOW",
                            "scope":[ 
-                              "/infra/domains/default/groups/WEBAPP"
+                              "/infra/domains/default/groups/JenkinsAPP01"
                            ]
                         },
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-05",
-                           "description":"webapp-rule-05",
+                           "id":"webapp-rule-03",
+                           "description":"webapp-rule-03",
                            "display_name":"APP to DB",
                            "sequence_number":90,
                            "source_groups":[ 
@@ -220,14 +175,14 @@
                            ],
                            "action":"ALLOW",
                            "scope":[ 
-                              "/infra/domains/default/groups/WEBAPP"
+                              "/infra/domains/default/groups/JenkinsAPP01"
                            ]
                         },
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-06",
-                           "description":"webapp-rule-06",
-                           "display_name":"Block the rest",
+                           "id":"webapp-rule-04",
+                           "description":"webapp-rule-04",
+                           "display_name":"DROP",
                            "sequence_number":100,
                            "destination_groups":[ 
                               "ANY"
@@ -244,7 +199,7 @@
                            "action":"DROP",
                            "logged":"true",
                            "scope":[ 
-                              "/infra/domains/default/groups/WEBAPP"
+                              "/infra/domains/default/groups/JenkinsAPP01"
                            ]
                         }
                      ]
@@ -255,33 +210,14 @@
                   "Group":{ 
                      "resource_type":"Group",
                      "marked_for_delete":"false",
-                     "id":"MGMT",
-                     "display_name":"MGMT",
-                     "expression":[ 
-                        { 
-                           "ip_addresses":[ 
-                              "192.168.100.1/32",
-                              "192.168.110.10/32"
-                           ],
-                           "resource_type":"IPAddressExpression",
-                           "marked_for_delete":"false"
-                        }
-                     ]
-                  }
-               },
-               { 
-                  "resource_type":"ChildGroup",
-                  "Group":{ 
-                     "resource_type":"Group",
-                     "marked_for_delete":"false",
-                     "id":"WEBAPP",
-                     "display_name":"WEBAPP",
+                     "id":"JenkinsAPP01",
+                     "display_name":"JenkinsAPP01",
                      "expression":[ 
                         { 
                            "member_type":"VirtualMachine",
                            "key":"Tag",
                            "operator":"EQUALS",
-                           "value":"webapp|",
+                           "value":"JenkinsAPP01|",
                            "resource_type":"Condition",
                            "marked_for_delete":"false"
                         }
@@ -300,7 +236,7 @@
                            "member_type":"VirtualMachine",
                            "key":"Tag",
                            "operator":"EQUALS",
-                           "value":"webapp|lb",
+                           "value":"JenkinsAPP01|lb",
                            "resource_type":"Condition",
                            "marked_for_delete":false
                         }
@@ -319,7 +255,7 @@
                            "member_type":"VirtualMachine",
                            "key":"Tag",
                            "operator":"EQUALS",
-                           "value":"webapp|web",
+                           "value":"JenkinsAPP01|web",
                            "resource_type":"Condition",
                            "marked_for_delete":false
                         }
@@ -338,7 +274,7 @@
                            "member_type":"VirtualMachine",
                            "key":"Tag",
                            "operator":"EQUALS",
-                           "value":"webapp|app",
+                           "value":"JenkinsAPP01|app",
                            "resource_type":"Condition",
                            "marked_for_delete":false
                         }
@@ -357,7 +293,7 @@
                            "member_type":"VirtualMachine",
                            "key":"Tag",
                            "operator":"EQUALS",
-                           "value":"webapp|db",
+                           "value":"JenkinsAPP01|db",
                            "resource_type":"Condition",
                            "marked_for_delete":false
                         }
