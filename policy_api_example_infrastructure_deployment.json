@@ -7,8 +7,8 @@
          "Tier1":{ 
             "resource_type":"Tier1",
             "id":"JenkinsAPP01-T1",
-            "description":"JenkinsAPP01-T1",
-            "display_name":"JenkinsAPP01-T1",
+            "description":"JenkinsAPP01",
+            "display_name":"JenkinsAPP01",
             "failover_mode":"NON_PREEMPTIVE",
             "tier0_path":"/infra/tier-0s/t0",
             "children":[ 
