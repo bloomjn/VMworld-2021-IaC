@@ -107,11 +107,11 @@
                      "resource_type":"SecurityPolicy",
                      "display_name":"JenkinsAPP01",
                      "description":"JenkinsAPP01 webapp Policy",
-                     "rules":[  
+                     "rules":[ 
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-01",
-                           "description":"webapp-rule-01",
+                           "id":"JenkinsAPP01-rule-01",
+                           "description":"JenkinsAPP01-rule-01",
                            "display_name":"LB to WEB",
                            "sequence_number":70,
                            "source_groups":[ 
@@ -133,8 +133,8 @@
                         },
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-02",
-                           "description":"webapp-rule-2",
+                           "id":"JenkinsAPP01-rule-02",
+                           "description":"JenkinsAPP01-rule-2",
                            "display_name":"WEB to APP",
                            "sequence_number":80,
                            "source_groups":[ 
@@ -156,8 +156,8 @@
                         },
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-03",
-                           "description":"webapp-rule-03",
+                           "id":"JenkinsAPP01-rule-03",
+                           "description":"JenkinsAPP01-rule-03",
                            "display_name":"APP to DB",
                            "sequence_number":90,
                            "source_groups":[ 
@@ -179,8 +179,8 @@
                         },
                         { 
                            "resource_type":"Rule",
-                           "id":"webapp-rule-04",
-                           "description":"webapp-rule-04",
+                           "id":"JenkinsAPP01-rule-04",
+                           "description":"JenkinsAPP01-rule-04",
                            "display_name":"DROP",
                            "sequence_number":100,
                            "destination_groups":[ 
