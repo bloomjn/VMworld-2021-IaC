@@ -107,8 +107,7 @@
                      "resource_type":"SecurityPolicy",
                      "display_name":"JenkinsAPP01",
                      "description":"JenkinsAPP01 webapp Policy",
-                     "rules":[ 
-                        { 
+                     "rules":[  
                         { 
                            "resource_type":"Rule",
                            "id":"webapp-rule-01",
