@@ -6,9 +6,9 @@
          "marked_for_delete":false,
          "Tier1":{ 
             "resource_type":"Tier1",
-            "id":"Jenkins-T1",
-            "description":"Jenkins-T1",
-            "display_name":"Jenkins-T1",
+            "id":"JenkinsAPP01-T1",
+            "description":"JenkinsAPP01-T1",
+            "display_name":"JenkinsAPP01-T1",
             "failover_mode":"NON_PREEMPTIVE",
             "tier0_path":"/infra/tier-0s/t0",
             "children":[ 
@@ -24,9 +24,9 @@
                   "resource_type":"ChildSegment",
                   "Segment":{ 
                      "resource_type":"Segment",
-                     "id":"jenkins-web",
+                     "id":"JenkinsAPP01-web",
                      "description":"overlay web logical switch",
-                     "display_name":"JENKINS-WEB",
+                     "display_name":"JenkinsAPP01-WEB",
                      "transport_zone_path":"/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e",
                      "subnets":[ 
                         { 
@@ -39,9 +39,9 @@
                   "resource_type":"ChildSegment",
                   "Segment":{ 
                      "resource_type":"Segment",
-                     "id":"jenkins-app",
+                     "id":"JenkinsAPP01-app",
                      "description":"overlay app logical switch",
-                     "display_name":"JENKINS-APP",
+                     "display_name":"JenkinsAPP01-APP",
                      "transport_zone_path":"/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e",
                      "subnets":[ 
                         { 
@@ -54,9 +54,9 @@
                   "resource_type":"ChildSegment",
                   "Segment":{ 
                      "resource_type":"Segment",
-                     "id":"jenkins-db",
+                     "id":"JenkinsAPP01-db",
                      "description":"overlay db logical switch",
-                     "display_name":"JENKINS-DB",
+                     "display_name":"JenkinsAPP01-DB",
                      "transport_zone_path":"/infra/sites/default/enforcement-points/default/transport-zones/1b3a2f36-bfd1-443e-a0f6-4de01abc963e",
                      "subnets":[ 
                         { 
@@ -103,10 +103,10 @@
                   "resource_type":"ChildSecurityPolicy",
                   "marked_for_delete":"false",
                   "SecurityPolicy":{ 
-                     "id":"webapp",
+                     "id":"JenkinsAPP01-webapp",
                      "resource_type":"SecurityPolicy",
-                     "display_name":"webapp",
-                     "description":"webapp Policy",
+                     "display_name":"JenkinsAPP01-webapp",
+                     "description":"JenkinsAPP01 webapp Policy",
                      "rules":[ 
                         { 
                            "resource_type":"Rule",
