@@ -3,7 +3,7 @@
    "children":[ 
       { 
          "resource_type":"ChildTier1",
-         "marked_for_delete":false,
+         "marked_for_delete":true,
          "Tier1":{ 
             "resource_type":"Tier1",
             "id":"JenkinsAPP01-T1",
@@ -70,7 +70,7 @@
       },
       { 
          "resource_type":"ChildService",
-         "marked_for_delete":false,
+         "marked_for_delete":true,
          "Service":{ 
             "service_entries":[ 
                { 
@@ -93,11 +93,11 @@
       },
       { 
          "resource_type":"ChildDomain",
-         "marked_for_delete":false,
+         "marked_for_delete":true,
          "Domain":{ 
             "id":"default",
             "resource_type":"Domain",
-            "marked_for_delete":false,
+            "marked_for_delete":true,
             "children":[ 
                { 
                   "resource_type":"ChildSecurityPolicy",
@@ -237,7 +237,7 @@
                            "operator":"EQUALS",
                            "value":"JenkinsAPP01|lb",
                            "resource_type":"Condition",
-                           "marked_for_delete":false
+                           "marked_for_delete":true
                         }
                      ]
                   }
@@ -246,7 +246,7 @@
                   "resource_type":"ChildGroup",
                   "Group":{ 
                      "resource_type":"Group",
-                     "marked_for_delete":false,
+                     "marked_for_delete":true,
                      "id":"WEB",
                      "display_name":"WEB",
                      "expression":[ 
@@ -256,7 +256,7 @@
                            "operator":"EQUALS",
                            "value":"JenkinsAPP01|web",
                            "resource_type":"Condition",
-                           "marked_for_delete":false
+                           "marked_for_delete":true
                         }
                      ]
                   }
@@ -265,7 +265,7 @@
                   "resource_type":"ChildGroup",
                   "Group":{ 
                      "resource_type":"Group",
-                     "marked_for_delete":false,
+                     "marked_for_delete":true,
                      "id":"APP",
                      "display_name":"APP",
                      "expression":[ 
@@ -275,7 +275,7 @@
                            "operator":"EQUALS",
                            "value":"JenkinsAPP01|app",
                            "resource_type":"Condition",
-                           "marked_for_delete":false
+                           "marked_for_delete":true
                         }
                      ]
                   }
@@ -284,7 +284,7 @@
                   "resource_type":"ChildGroup",
                   "Group":{ 
                      "resource_type":"Group",
-                     "marked_for_delete":false,
+                     "marked_for_delete":true,
                      "id":"DB",
                      "display_name":"DB",
                      "expression":[ 
@@ -294,7 +294,7 @@
                            "operator":"EQUALS",
                            "value":"JenkinsAPP01|db",
                            "resource_type":"Condition",
-                           "marked_for_delete":false
+                           "marked_for_delete":true
                         }
                      ]
                   }
