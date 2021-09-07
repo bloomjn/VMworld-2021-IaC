@@ -167,7 +167,7 @@
                               "/infra/domains/default/groups/DB"
                            ],
                            "services":[ 
-                              "/infra/services/HTTP"
+                              "/infra/services/PostgreSQL"
                            ],
                            "profiles":[ 
                               "ANY"
@@ -227,7 +227,7 @@
                   "resource_type":"ChildGroup",
                   "Group":{ 
                      "resource_type":"Group",
-                     "marked_for_delete":false,
+                     "marked_for_delete":true,
                      "id":"LB",
                      "display_name":"LB",
                      "expression":[ 
