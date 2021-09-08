@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "1bcd64b7-2ef6-4925-8f01-5222c55129f2",
+		"name": "VMworld 2021 IaC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Base NSX API URL",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin!23Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.182.3.46/policy/api/v1",
+					"protocol": "https",
+					"host": [
+						"10",
+						"182",
+						"3",
+						"46"
+					],
+					"path": [
+						"policy",
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NSX L3 Config",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin!23Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.182.3.46/policy/api/v1/infra/tier-1s/Skeleton",
+					"protocol": "https",
+					"host": [
+						"10",
+						"182",
+						"3",
+						"46"
+					],
+					"path": [
+						"policy",
+						"api",
+						"v1",
+						"infra",
+						"tier-1s",
+						"Skeleton"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NSX L2 Config",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin!23Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.182.3.46/policy/api/v1/infra/segments/Skeleton-App",
+					"protocol": "https",
+					"host": [
+						"10",
+						"182",
+						"3",
+						"46"
+					],
+					"path": [
+						"policy",
+						"api",
+						"v1",
+						"infra",
+						"segments",
+						"Skeleton-App"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NSX Security Policy Config",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin!23Admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://10.182.3.46/policy/api/v1/infra/domains/default/security-policies/Skeleton",
+					"protocol": "https",
+					"host": [
+						"10",
+						"182",
+						"3",
+						"46"
+					],
+					"path": [
+						"policy",
+						"api",
+						"v1",
+						"infra",
+						"domains",
+						"default",
+						"security-policies",
+						"Skeleton"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
