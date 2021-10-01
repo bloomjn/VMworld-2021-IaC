@@ -1,4 +1,4 @@
-# Getting Started with NSX Infrastructure as Code [NET2272]
+# [NET2272] Getting Started with NSX Infrastructure as Code
 
 Goal
   - Automate infrastructure using well known industry tools and integrate it into a code pipeline!
